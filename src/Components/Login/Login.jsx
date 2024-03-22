@@ -44,7 +44,6 @@ const Login = () => {
         </div> 
         </div>
         
-        
       </div>
       <div className="w-5/12 pt-24">
         <div className="w-8/12 px-4 py-10 rounded-lg shadow-sm">
@@ -84,11 +83,12 @@ const Login = () => {
               </svg>
               <input type="password" className="grow" placeholder="Password" />
             </label>
-           <div className="w-full flex justify-center">
+           <div className="w-full flex justify-center pt-2">
            <button class="bg-[#3365e1] max-w-xs mx-auto hover:bg-blue-900  text-[#D9D9D9] font-bold py-2 px-4 rounded-lg w-full">
               Log in
             </button>
            </div>
+           <p><span className='italic font-bold text-[#202934]'><a href="#">Sign Up Here</a></span> as Teacher or Student</p>
           </div>
         </div>
       </div>
