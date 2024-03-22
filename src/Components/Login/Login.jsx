@@ -45,7 +45,7 @@ const Login = () => {
         </div>
         
       </div>
-      <div className="w-5/12 pt-24">
+      <div className="w-5/12 pt-40">
         <div className="w-8/12 px-4 py-10 rounded-lg shadow-sm">
           <div className="pb-2">
             <h3 className="text-2xl text-[#202934]">Sign in</h3>
