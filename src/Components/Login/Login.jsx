@@ -2,8 +2,8 @@ import capImg from '../../assets/Cap.png';
 import heroImg from '../../assets/left-bg.png';
 const Login = () => {
   return (
-    <div className="flex h-screen ">
-      <div className="w-7/12 bg-cover bg-no-repeat" style={{
+    <div className="flex md:flex flex-col md:flex-row  h-screen ">
+      <div className="hidden md:block md:w-7/12 bg-cover bg-no-repeat " style={{
         backgroundImage: `url(${heroImg})`
       }}>
         <div class="w-full h-full flex 
@@ -38,23 +38,24 @@ const Login = () => {
             </div>
 
             
-        <button class="bg-[#d8d8d8] max-w-xs mt-20 ml-10 hover:bg-blue-900  text-[#202934] font-bold py-2 px-4 rounded-lg w-full pb-4 ">
+        <button class="bg-[#d9d9d9] max-w-xs mt-20 ml-10 hover:bg-blue-900  text-[#0886BC] font-bold py-2 px-4 rounded-lg w-full pb-4 ">
               Learn more
             </button>
         </div> 
         </div>
         
       </div>
-      <div className="w-5/12 pt-40">
-        <div className="w-8/12 px-4 py-10 rounded-lg shadow-sm">
+
+      <div className="w-full md:w-5/12 md:pt-20 p-8">
+        <div className="px-4 md:py-10 rounded-lg shadow-sm pl-4 pt-32">
           <div className="pb-2">
             <h3 className="text-2xl text-[#202934]">Sign in</h3>
-            <span className="text-xs pb-4 text-[#202934]">
+            <span className="text-xs pb-4 text-[#0886BC]">
               sign in with your email and password
             </span>
           </div>
           <hr className="h-[2px] bg-black mx-4 mb-4" />
-          <div>
+          <div className=''>
             <label className="input bg-white input-bordered flex items-center gap-2 mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,11 +85,11 @@ const Login = () => {
               <input type="password" className="grow" placeholder="Password" />
             </label>
            <div className="w-full flex justify-center pt-2">
-           <button class="bg-[#3365e1] max-w-xs mx-auto hover:bg-blue-900  text-[#D9D9D9] font-bold py-2 px-4 rounded-lg w-full">
+           <button class="bg-[#0886BC] max-w-xs mx-auto hover:bg-blue-900  text-[#D9D9D9] font-bold py-2 px-4 rounded-lg w-full">
               Log in
             </button>
            </div>
-           <p><span className='italic font-bold text-[#202934]'><a href="#">Sign Up Here</a></span> as Teacher or Student</p>
+           <p className='italic text-[#0886BC] text-base text-start pt-4 pb-4 pl-2'>Don't Have an Account?<span className='underline font-bold'> <a href="#">Sign Up Here</a></span> as Teacher or Student</p>
           </div>
         </div>
       </div>
