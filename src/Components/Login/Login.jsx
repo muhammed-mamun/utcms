@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import capImg from '../../assets/Cap.png';
 import heroImg from '../../assets/left-bg.png';
+import Modal from '../Modal/Modal';
 const Login = () => {
+    const [showModal, setShowModal] = useState(false)
   return (
     <div className="flex md:flex flex-col md:flex-row  h-screen ">
       <div className="hidden md:block md:w-7/12 bg-cover bg-no-repeat " style={{
@@ -55,7 +58,7 @@ const Login = () => {
             </span>
           </div>
           <hr className="h-[2px] bg-black mx-4 mb-4" />
-          <div className=''>
+          <form >
             <label className="input bg-white input-bordered flex items-center gap-2 mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +69,7 @@ const Login = () => {
                 <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
                 <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
               </svg>
-              <input type="text" className="grow" placeholder="Email" />
+              <input type="email" className="grow" placeholder="Email" required />
             </label>
 
             <label className="input input-bordered bg-white  flex items-center gap-2 mb-2">
@@ -85,14 +88,18 @@ const Login = () => {
               <input type="password" className="grow" placeholder="Password" />
             </label>
            <div className="w-full flex justify-center pt-2">
-           <button class="bg-[#0886BC] max-w-xs mx-auto hover:bg-blue-900  text-[#D9D9D9] font-bold py-2 px-4 rounded-lg w-full">
-              Log in
-            </button>
+                <button
+                
+                class="bg-[#0886BC] max-w-xs mx-auto hover:bg-blue-900  text-[#D9D9D9] font-bold py-2 px-4 rounded-lg w-full">
+                    Log in
+                </button>
+               
            </div>
-           <p className='italic text-[#0886BC] text-base text-start pt-4 pb-4 pl-2'>Don't Have an Account?<span className='underline font-bold'> <a href="#">Sign Up Here</a></span> as Teacher or Student</p>
-          </div>
+          </form>
+          <p className='italic text-[#0886BC] text-base text-start pt-4 pb-4 pl-2'>Don't Have an Account?<span className='underline font-bold'> <a  onClick={()=> setShowModal(!showModal)} href="#">Sign Up Here</a></span> as Teacher or Student</p>
         </div>
       </div>
+      {showModal && <Modal onClose ={()=> setShowModal(!showModal)}/>}
     </div>
   );
 };

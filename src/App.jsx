@@ -6,8 +6,6 @@ function App() {
     <div className="container-full h-screen  bg-[#d9d9d9]">
         
           <Login></Login>
-
-        
     </div>
   );
 }
